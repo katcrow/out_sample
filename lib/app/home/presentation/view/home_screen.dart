@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'package:clean_tutorial1/app/home/core/helper/focus_helper.dart';
 import 'package:clean_tutorial1/app/home/presentation/component/photo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../../../mock/sample/core/helper/focus_helper.dart';
 import '../vm/home_view_model.dart';
 
 class HomeScreen extends StatefulWidget {
