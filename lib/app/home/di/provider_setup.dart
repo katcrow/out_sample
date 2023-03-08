@@ -2,7 +2,6 @@ import 'package:clean_tutorial1/app/home/presentation/vm/home_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:http/http.dart' as http;
-
 import '../data/data_source/pixabay_api.dart';
 import '../data/repository/photo_api_repository_impl.dart';
 import '../domain/repository/photo_api_repository.dart';

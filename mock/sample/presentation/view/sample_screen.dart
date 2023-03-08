@@ -59,9 +59,10 @@ class _SampleScreenState extends State<SampleScreen> {
         appBar: AppBar(
           elevation: 0.0,
           title: const Text(
-            '이미지 검색앱',
+            '샘플 이미지 검색앱',
             style: TextStyle(
               color: Colors.black,
+              fontWeight: FontWeight.bold,
             ),
           ),
           centerTitle: true,

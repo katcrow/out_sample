@@ -3,7 +3,6 @@ import 'package:clean_tutorial1/app/home/domain/model/photo.dart';
 import 'package:clean_tutorial1/app/home/presentation/vm/vm_util/home_state.dart';
 import 'package:clean_tutorial1/app/home/presentation/vm/vm_util/home_ui_event.dart';
 import 'package:flutter/material.dart';
-
 import '../../data/data_source/result.dart';
 import '../../domain/use_case/get_photos_use_case.dart';
 
@@ -12,7 +11,7 @@ import '../../domain/use_case/get_photos_use_case.dart';
 class HomeViewModel with ChangeNotifier {
   final GetPhotosUseCase getPhotosUseCase;
 
-  /// state
+  // state
   HomeState _state = HomeState(photos: [], isLoading: false);
 
   HomeState get state => _state;
@@ -21,7 +20,7 @@ class HomeViewModel with ChangeNotifier {
 
   Stream<HomeUiEvent> get eventStream => _eventController.stream;
 
-  /// constructor
+  // constructor
   HomeViewModel(this.getPhotosUseCase);
 
   Future<void> fetch(String query) async {

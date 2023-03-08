@@ -1,4 +1,3 @@
-import 'dart:math';
 import '../../data/data_source/result.dart';
 import '../model/photo.dart';
 import '../repository/photo_api_repository.dart';
@@ -13,10 +12,11 @@ class GetPhotosUseCase {
 
     return result.when(
       success: (photos) {
-        return Result.success(photos.sublist(0, min(3, photos.length)));
+        return Result.success(photos);
+        // return Result.success(photos.sublist(0, min(3, photos.length)));
       },
-      error: (message) {
-        return Result.error(message);
+      error: (message) {        return Result.error(message);
+
       },
     );
   }

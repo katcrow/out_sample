@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:clean_tutorial1/mock/sample/presentation/vm/vm_util/sample_state.dart';
 import 'package:flutter/material.dart';
 import '../../data/data_source/sample_result.dart';
 import '../../domain/model/sample_photo.dart';
 import '../../domain/use_case/sample_get_photos_uc.dart';
+import 'vm_util/sample_state.dart';
 import 'vm_util/sample_ui_event.dart';
 
 /// viewModel 은 간단하게 데이터 전달 역할만 하는게 좋다

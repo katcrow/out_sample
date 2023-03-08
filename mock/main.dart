@@ -1,7 +1,7 @@
-import 'package:clean_tutorial1/mock/sample/presentation/view/sample_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'sample/di/sample_provider_setup.dart';
+import 'sample/presentation/view/sample_screen.dart';
 
 void main() {
   runApp(
