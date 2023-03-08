@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:clean_tutorial1/app/home/presentation/vm/vm_util/home_state.dart';
 import 'package:clean_tutorial1/mock/sample/presentation/vm/vm_util/sample_state.dart';
 import 'package:flutter/material.dart';
 import '../../data/data_source/sample_result.dart';

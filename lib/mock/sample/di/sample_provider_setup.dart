@@ -9,7 +9,7 @@ import '../domain/use_case/sample_get_photos_uc.dart';
 import '../presentation/vm/sample_view_model.dart';
 
 /// 1. provider 전체
-List<SingleChildWidget> globalProviders = [
+List<SingleChildWidget> sampleGlobalProviders = [
   ...independentModels,
   ...dependentModels,
   ...viewModels,

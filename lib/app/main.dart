@@ -1,7 +1,8 @@
-import 'package:clean_tutorial1/mock/sample/presentation/view/sample_screen.dart';
+import 'package:clean_tutorial1/app/home/presentation/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'mock/sample/di/sample_provider_setup.dart';
+import 'home/di/provider_setup.dart';
+
 
 void main() {
   runApp(
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SampleScreen(),
+      home: const HomeScreen(),
     );
   }
 }

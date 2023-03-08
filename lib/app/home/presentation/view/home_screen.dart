@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisSpacing: 16,
                         mainAxisSpacing: 16,
-                        crossAxisCount: 2,
+                        crossAxisCount: 3,
                       ),
                       itemBuilder: (context, index) {
                         return PhotoWidget(
