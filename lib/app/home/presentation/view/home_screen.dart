@@ -1,4 +1,5 @@
 import 'dart:async';
+
 // import 'package:clean_tutorial1/app/home/presentation/component/photo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -60,19 +61,22 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           elevation: 0.0,
           leading: IconButton(
-            icon: const Icon(Icons.menu, color: Colors.black),
+            icon: const Icon(
+              Icons.menu,
+              // color: Colors.black,
+            ),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
           ),
           title: const Text(
             '이미지 검색앱',
-            style: TextStyle(
-              color: Colors.black,
-            ),
+            // style: TextStyle(
+            //   color: Colors.black,
+            // ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.white,
+          // backgroundColor: Colors.white,
         ),
         drawer: Drawer(
           child: ListView(
@@ -128,8 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: CircularProgressIndicator(color: Colors.blue),
                   )
                 : Expanded(
-                    child:
-                    StaggeredGridView(
+                    child: StaggeredGridView(
                       photos: state.photos,
                     ),
 

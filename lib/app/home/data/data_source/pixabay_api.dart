@@ -13,11 +13,8 @@ class PixabayApi {
         Uri.parse(
             "${AppConstant.baseUrl}?key=${AppConstant.apiKey}=$query&image_type=photo&pretty=true"),
       );
-
       Map<String, dynamic> jsonResponse = jsonDecode(response.body);
-
       Iterable hits = jsonResponse['hits'];
-
       return Result.success(hits);
     } catch (e) {
       return const Result.error('네트워크 에러');
