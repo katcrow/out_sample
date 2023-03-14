@@ -39,7 +39,7 @@ class FakePhotoApiRepository extends PhotoApiRepository {
   }
 }
 
-/// fakeData
+// fakeData
 List<Map<String, dynamic>> fakeJson = [
   {
     "id": 634572,

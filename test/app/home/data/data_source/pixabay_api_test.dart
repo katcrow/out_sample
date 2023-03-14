@@ -3,12 +3,12 @@ import 'package:clean_tutorial1/app/home/data/data_source/result.dart';
 import 'package:clean_tutorial1/app/home/data/repository/photo_api_repository_impl.dart';
 import 'package:clean_tutorial1/app/home/domain/model/photo.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
+// import 'package:mockito/annotations.dart';
 
-@GenerateMocks([http.Client])
+// @GenerateMocks([http.Client])
 void main() {
-  test('Pixabay 데이터를 잘 가져와야 한다', () async {
+  test('Pixabay 데이터를 가져와야 한다', () async {
     final api = PhotoApiRepositoryImpl(
       PixabayApi(http.Client()),
     );
@@ -19,10 +19,15 @@ void main() {
       (result as Success<List<Photo>>).data.first.id,
       2681039,
     );
+
+    expect(
+      result.data.length,
+      20,
+    );
   });
 }
 
-/// fakeData
+// fakeData
 String fakeJson = """
    {
             "id":2681039,
