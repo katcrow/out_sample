@@ -1,7 +1,7 @@
-import 'package:clean_tutorial1/app/home/presentation/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'home/di/provider_setup.dart';
+import 'home/dependency/provider_setup.dart';
+import 'home/presentation/view/home_screen.dart';
 
 
 void main() {

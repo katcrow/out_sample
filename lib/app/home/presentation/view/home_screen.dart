@@ -1,6 +1,4 @@
 import 'dart:async';
-
-// import 'package:clean_tutorial1/app/home/presentation/component/photo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../core/helper/focus_helper.dart';
@@ -60,43 +58,41 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0.0,
-          leading: IconButton(
-            icon: const Icon(
-              Icons.menu,
-              // color: Colors.black,
-            ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          ),
           title: const Text(
             '이미지 검색앱',
-            // style: TextStyle(
-            //   color: Colors.black,
-            // ),
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+            ),
           ),
           centerTitle: true,
-          // backgroundColor: Colors.white,
         ),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue,
+              DrawerHeader(
+                child: Text(
+                  'Drawer Header',
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
-                child: Text('Drawer Header'),
               ),
               ListTile(
-                title: const Text('Item 1'),
+                leading: const Icon(
+                  Icons.note_add_outlined,
+                  size: 30,
+                ),
+                title: const Text('Note App'),
                 onTap: () {
                   // Update the state of the app.
                   // ...
                 },
               ),
               ListTile(
-                title: const Text('Item 2'),
+                leading: const Icon(
+                  Icons.food_bank_outlined,
+                  size: 30,
+                ),
+                title: const Text('restaurant App'),
                 onTap: () {
                   // Update the state of the app.
                   // ...
@@ -135,21 +131,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: StaggeredGridView(
                       photos: state.photos,
                     ),
-
-                    // GridView.builder(
-                    //   padding: const EdgeInsets.all(16.0),
-                    //   itemCount: state.photos.length,
-                    //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    //     crossAxisSpacing: 16,
-                    //     mainAxisSpacing: 16,
-                    //     crossAxisCount: 2,
-                    //   ),
-                    //   itemBuilder: (context, index) {
-                    //     return PhotoWidget(
-                    //       photo: state.photos[index],
-                    //     );
-                    //   },
-                    // ),
                   ),
           ],
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'sample/di/sample_provider_setup.dart';
+import 'sample/dependency/sample_provider_setup.dart';
 import 'sample/presentation/view/sample_screen.dart';
 
 void main() {
@@ -20,9 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      // ),
+      theme: ThemeData.dark().copyWith(useMaterial3: true),
       home: const SampleScreen(),
     );
   }

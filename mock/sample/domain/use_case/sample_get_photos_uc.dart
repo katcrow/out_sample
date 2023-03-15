@@ -13,6 +13,7 @@ class SampleGetPhotosUc {
     return result.when(
       success: (photos) {
         return SampleResult.success(photos);
+        // return SampleResult.success(photos.sublist(0, 6));
       },
       error: (message) {
         return SampleResult.error(message);

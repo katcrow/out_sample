@@ -6,7 +6,10 @@ import '../../domain/use_case/sample_get_photos_uc.dart';
 import 'vm_util/sample_state.dart';
 import 'vm_util/sample_ui_event.dart';
 
-/// viewModel 은 간단하게 데이터 전달 역할만 하는게 좋다
+///***********************************************
+/// viewModel 은 간단하게 데이터 전달 역할만 하는게 좋다.
+/// 외부 변수는 읽기 전용으로 불변객체로 만들자.
+///***********************************************
 
 class SampleViewModel with ChangeNotifier {
   final SampleGetPhotosUc getPhotosUc;
@@ -23,12 +26,12 @@ class SampleViewModel with ChangeNotifier {
   /// constructor
   SampleViewModel(this.getPhotosUc);
 
+  /// method
   Future<void> fetch(String query) async {
     _state = state.copyWith(isLoading: true);
     notifyListeners();
 
     final SampleResult<List<SamplePhoto>> result = await getPhotosUc(query);
-
     result.when(
       success: (photos) {
         _state = state.copyWith(photos: photos);
